@@ -1,0 +1,11 @@
+name: Callie
+
+on:
+  workflow_call:
+
+jobs:
+  LOL:
+    runs-on: ubuntu-latest
+    steps:
+      - name: lol
+        run: echo "LOL"
