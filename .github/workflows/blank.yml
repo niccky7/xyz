@@ -2,10 +2,16 @@ name: Callie
 
 on:
   workflow_call:
+   inputs:
+    username:
+        description: 'A username passed from the caller workflow'
+        default: 'john-doe'
+        required: false
+        type: string
 
 jobs:
   LOL:
     runs-on: ubuntu-latest
     steps:
       - name: lol
-        run: echo "LOL"
+        run: echo ${{ inputs.username }}
